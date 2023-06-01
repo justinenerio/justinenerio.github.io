@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Home`}
-      description="Software Developer>">
+      description="Software Developer">
       <HomepageHeader />
     </Layout>
   );

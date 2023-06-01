@@ -26,9 +26,10 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-        },
+        docs: false, 
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        // },
         blog: {
           showReadingTime: true,
         },
@@ -42,14 +43,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      // image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+      },
       navbar: {
-        title: 'Justin Enerio',
-        logo: {
-          alt: 'Justin Enerio',
-          src: 'img/logo.svg',
-        },
+        title: 'justinenerio',
         items: [
           // {
           //   type: 'docSidebar',
@@ -57,7 +56,7 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'blog', position: 'right'},
         ],
       },
       footer: {

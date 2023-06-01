@@ -1,7 +1,9 @@
 ---
 slug: first-blog-post
 title: First Blog Post
-authors: [justin]
+authors:
+    - key: justin
+      title: Software Developer
 tags: [hola]
 ---
 
