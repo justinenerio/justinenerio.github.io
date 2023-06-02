@@ -11,7 +11,6 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">hi, i'm justin
         pls hire me am asset to da company</p>
       </div>
@@ -24,7 +23,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Home`}
-      description="Software Developer">
+      description="Software Developer, Flutter Developer">
       <HomepageHeader />
     </Layout>
   );
