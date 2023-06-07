@@ -1,30 +1,43 @@
-import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React, { useEffect, useRef, useState } from "react";
 import Layout from '@theme/Layout';
 
-import styles from './index.module.css';
+import styles from './index/index.module.css';
+import SocialLinks from "./index/components/_SocialLinks";
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <p className="hero__subtitle">hi, i'm justin
-        pls hire me am asset to da company</p>
-      </div>
-    </header>
-  );
-}
+function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [headerHeight, setHeaderHeight] = useState(1536);
+  const [bannerHeight, setBannerHeight] = useState(256);
 
-export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  useEffect(() => {
+    const tempHeaderHeight = Math.max(384, window.innerHeight);
+    setHeaderHeight(tempHeaderHeight);
+    setBannerHeight(Math.max(256, tempHeaderHeight / 2));
+    setIsLoading(false);
+  }, []);
   return (
     <Layout
       title={`Home`}
-      description="Software Developer, Flutter Developer">
-      <HomepageHeader />
+      description="Software Developer, Flutter Developer"
+    >
+
+      <header className={styles.heroBanner} style={{ minHeight: headerHeight }}>
+        <div
+          className={styles.heroBannerWrapper}
+          style={{ minHeight: bannerHeight, display: isLoading ? "none" : "block" }}
+        >
+          <p>Hi, my name is</p>
+          <h1 className="text-success">Justin Enerio</h1>
+          <p>
+            I am a <span className="text-warning">Software Engineer</span> focused on 
+            <span className="text-danger"> Flutter Development</span>, passionate about
+            solving meaningful problems.
+          </p>
+          <SocialLinks />
+        </div>
+      </header>
     </Layout>
   );
 }
+
+export default Home;

@@ -20,13 +20,12 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false, 
+        docs: false,
         // docs: {
         //   sidebarPath: require.resolve('./sidebars.js'),
         // },
@@ -47,21 +46,18 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{name: 'keywords', content: 'personal, blog, software, development, justinenerio, justin, enerio, philippines'}],
+      metadata: [{ name: 'keywords', content: 'personal, blog, software, development, justinenerio, justin, enerio, philippines' }],
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
       },
       navbar: {
         title: 'justinenerio',
+        hideOnScroll: true,
         items: [
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'tutorialSidebar',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          // },
-          {to: '/blog', label: 'blog', position: 'right'},
+          { to: '/projects', label: 'projects', position: 'right' },
+          { to: '/blog', label: 'blog', position: 'right' },
+          { to: '/about', label: 'about', position: 'right' },
         ],
       },
       footer: {
@@ -97,6 +93,18 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    plugins:    [
+      async function tailwindPlugin(context, options) {
+        return {
+          name: "docusaurus-tailwindcss",
+          configurePostCss(postcssOptions) {
+            postcssOptions.plugins.push(require("tailwindcss"));
+            postcssOptions.plugins.push(require("autoprefixer"));
+            return postcssOptions;
+          },
+        };
+      },
+    ],
 };
 
 module.exports = config;

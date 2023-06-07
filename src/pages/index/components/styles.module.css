@@ -1,0 +1,18 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 1.2rem 0;
+  padding-left: 0.3rem;
+}
+
+.socialLinks div {
+  margin-right: 1rem;
+}
+
+.socialLinks a {
+  font-size: 1rem;
+  width: 100%;
+}
