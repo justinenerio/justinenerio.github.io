@@ -5,35 +5,30 @@ module.exports = {
     preflight: false, // disable Tailwind reset to avoid overriding Docusaurus styles
   },
   content: ["./src/**/*.{js,jsx,ts,tsx}", "../docs/**/*.mdx"],
-  darkMode: ["class", '[data-theme="dark"]'], // hooks into docusaurus' dark mode settings
   theme: {
     colors: {
-      white: "#fff",
-      primary: {
-        300: "#13cc72",
-        400: "#11b565",
-        500: "#10ad61",
-        600: "#0f9d58",
-        default: "#0f9d58",
-        700: "#0d8d4f",
-        800: "#0d854b",
-        900: "#0a6e3e",
-      },
-      secondary: {
-        300: "#ededed",
-        400: "#d4d4d4",
-        500: "#adadad",
-        600: "#878787",
-        default: "#878787",
-        700: "#616161",
-        800: "#141414",
-        900: "#0d0d0d",
-      },
-      success: "#0d8d4f",
-      warning: "#f4b400",
-      danger: "#db4437",
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'yellow': '#ffc82c',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
     },
-    extend: {},
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '8xl': '96rem',
+        '9xl': '128rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
   },
-  plugins: [],
 };

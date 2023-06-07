@@ -1,5 +1,5 @@
 import { faFile, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin, faPadlet } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const links = [
   {
@@ -15,7 +15,7 @@ const links = [
   {
     faIcon: faFile,
     alt: "Resume",
-    url: "mailto:contact@justinenerio.dev",
+    url: "https://justinenerio.dev/files/resume.pdf",
   },
 ];
 

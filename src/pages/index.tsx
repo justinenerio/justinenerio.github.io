@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Layout from '@theme/Layout';
 
 import styles from './index/index.module.css';
-import SocialLinks from "./index/components/_SocialLinks";
+import SocialLinks from "./index/_components/_SocialLinks";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true)

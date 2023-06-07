@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import clsx from "clsx";
 
@@ -20,9 +20,11 @@ import {
 import { faChrome } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./styles.module.css";
-import projects from "../../data/_projects";
+import {
+  ProjectList,
+} from '../../data/_projects';
 
-function CategoryIcon({ category, size = "1x" }) {
+function CategoryIcon({ category }) {
   let faIcon;
   switch (category) {
     case "Project":
@@ -41,41 +43,53 @@ function CategoryIcon({ category, size = "1x" }) {
       faIcon = faFile;
   }
 
-  return <FontAwesomeIcon title={''} icon={faIcon}/>;
+  return <FontAwesomeIcon title={category} icon={faIcon} size="1x" />;
 }
 
 export function ProjectListings() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 px-4 md:px-0">
-      {projects.map((project) => (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 px-4 md:px-4">
+      {ProjectList.map((project) => (
         <div
           id={project.title}
           key={project.title + "-card"}
-          className="bg-secondary-800 hover:bg-secondary-900 transition rounded-lg overflow-hidden"
+          className="bg-white rounded-lg overflow-hidden shadow-md"
         >
           <Link
             to={useBaseUrl(project.slug)}
             className="block h-full text-white hover:text-white no-underline hover:no-underline"
           >
             {project.imageUrl ? (
-              <div className="overflow-hidden h-40 md:h-48">
+              <div className="overflow-hidden h-40 w-full md:h-48">
                 <img src={useBaseUrl(project.imageUrl)} alt={project.title} />
               </div>
             ) : (
               <div
                 className={
                   project.bgColor == "alternate"
-                    ? "overflow-hidden bg-danger h-40 md:h-48"
-                    : "overflow-hidden bg-success h-40 md:h-48"
+                    ? "overflow-hidden bg-orange h-40 md:h-48"
+                    : "overflow-hidden bg-orange h-40 md:h-48"
                 }
               >
                 <h2 className="m-3 inline-block">{project.title}</h2>
               </div>
             )}
             <div className="pt-4 px-4">
-              <h3 className="mb-1">{project.title}</h3>
-              <p className="text-s mb-2 text-secondary-500">{project.period}</p>
-              <p>{project.subtitle}</p>
+              <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
+              <p className="text-sm text-gray-500 mb-2">{project.period}</p>
+              <p className="text-gray-600">{project.subtitle}</p>
+              {project.tech.length > 0 && (
+                <div className="flex flex-wrap mt-2">
+                  {project.tech.map((tag, index) => (
+                    <span
+                    key={index}
+                    className="inline-flex items-center bg-gray-200 text-gray-800 text-sm rounded-full px-3 py-1 mr-2 mb-2 border border-gray-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
               <p className="text-primary-default font-bold">Read more</p>
             </div>
           </Link>
@@ -106,24 +120,12 @@ export function ProjectListing(props) {
             {projectItem.category}
           </li>
           <li>
-            <FontAwesomeIcon icon={faCalendar} />{" "}
+            <FontAwesomeIcon title="Calendar" icon={faCalendar} />{" "}
             {projectItem.period}
           </li>
           <li>
-            <FontAwesomeIcon icon={faCode} /> {projectItem.tech}
+            <FontAwesomeIcon title="Code" icon={faCode} /> {projectItem.tech}
           </li>
-          {projectItem.team && (
-            <li>
-              <FontAwesomeIcon icon={faUsers} />{" "}
-              {projectItem.team.map((member, i) => (
-                <span key={i}>
-                  {member.link && <a href={member.link}>{member.name}</a>}
-                  {!member.link && member.name}
-                  {i < projectItem.team.length - 1 ? ", " : ""}
-                </span>
-              ))}
-            </li>
-          )}
         </ul>
         <b>Description</b>
         <div>{projectItem.description}</div>
@@ -133,8 +135,8 @@ export function ProjectListing(props) {
             <ul>
               {projectItem.links.map((link, i) => (
                 <li key={i}>
-                  <a href={link.link}>
-                    <FontAwesomeIcon icon={faLink} /> {link.name}
+                  <a href={link.link} target="_blank">
+                    <FontAwesomeIcon title="Link" icon={faLink} /> {link.name}
                   </a>
                 </li>
               ))}
@@ -151,21 +153,20 @@ export function ProjectListing(props) {
   );
 }
 
-
-
 export default function Projects() {
   const context = useDocusaurusContext();
+  const { siteConfig = {} } = context;
 
   const [loaded, setLoaded] = useState(false);
   const [showProjectItem, setShowProjectItem] = useState(false);
-  const [projectItem, setProjectItem] = useState(projects[0]);
+  const [projectItem, setProjectItem] = useState(ProjectList[0]);
   const slug = useLocation();
 
   useEffect(() => {
     function handleTransition() {
       let foundProject;
       if (slug.hash) {
-        foundProject = projects.find((project) => project.slug == slug.hash);
+        foundProject = ProjectList.find((project) => project.slug == slug.hash);
       }
 
       if (foundProject) {
@@ -183,7 +184,7 @@ export default function Projects() {
   });
 
   return (
-    <Layout title="Projects" description={'asdf'}>
+    <Layout title="Projects" description="Software Developer, Flutter Developer">
       <header className={styles.projectPageHeader}>
         <h2 className="border-0 border-b-4">
           Projects
