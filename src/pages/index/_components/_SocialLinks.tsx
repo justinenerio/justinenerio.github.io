@@ -8,7 +8,7 @@ import links from "../../../data/_social";
 function SocialLink({ faIcon, alt, url }) {
   return (
     <div>
-      <a href={url} className="text-primary-900 hover:text-primary-800">
+      <a href={url} target="_blank" className="text-primary-900 hover:text-primary-800">
         <FontAwesomeIcon title={alt} icon={faIcon} size="2x" />
       </a>
     </div>
