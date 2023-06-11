@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[659],{4056:(e,t,r)=>{r.r(t),r.d(t,{default:()=>c});var s=r(7294),i=r(2263),n=r(2921);function c(){const{siteConfig:e}=(0,i.Z)();return s.createElement(n.Z,{title:"Projects",description:"Software Developer, Flutter Developer"})}}}]);
