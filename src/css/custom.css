@@ -10,15 +10,20 @@
  
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #117385;
-  --ifm-color-primary-dark: #0f6778;
-  --ifm-color-primary-darker: #0e6271;
-  --ifm-color-primary-darkest: #0c505d;
-  --ifm-color-primary-light: #137e92;
-  --ifm-color-primary-lighter: #148499;
-  --ifm-color-primary-lightest: #1695ad;
+  --ifm-color-primary: #fd7e14;
+  --ifm-color-primary-dark: #f47002;
+  --ifm-color-primary-darker: #e66a02;
+  --ifm-color-primary-darkest: #bd5702;
+  --ifm-color-primary-light: #fd8d2f;
+  --ifm-color-primary-lighter: #fd943d;
+  --ifm-color-primary-lightest: #feab65;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: var(--ifm-color-primary);
+  color: white;
 }
 
 .navbar {

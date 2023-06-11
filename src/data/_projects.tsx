@@ -45,9 +45,8 @@ export const ProjectList: Project[] = [
     description: (
       <>
         <p>
-          I first started this portfolio template project back in October 2020.
-          The template has gone through numerous iterations ever since, and is
-          still updated presently.
+          I've created this website to showcase my projects, try to write some blog posts,
+          and increase my online presence.
         </p>
       </>
     ),

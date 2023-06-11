@@ -21,6 +21,7 @@ import { faChrome } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./styles.module.css";
 import {
+  Project,
   ProjectList,
 } from '../../data/_projects';
 
@@ -57,7 +58,7 @@ export function ProjectListings() {
         >
           <Link
             to={useBaseUrl(project.slug)}
-            className="block h-full text-white hover:text-white no-underline hover:no-underline"
+            className="block h-full no-underline hover:no-underline"
           >
             {project.imageUrl ? (
               <div className="overflow-hidden h-40 w-full md:h-48">
@@ -65,11 +66,7 @@ export function ProjectListings() {
               </div>
             ) : (
               <div
-                className={
-                  project.bgColor == "alternate"
-                    ? "overflow-hidden bg-orange h-40 md:h-48"
-                    : "overflow-hidden bg-orange h-40 md:h-48"
-                }
+                className={"overflow-hidden bg-orange h-40 md:h-48"}
               >
                 <h2 className="m-3 inline-block">{project.title}</h2>
               </div>
@@ -82,8 +79,8 @@ export function ProjectListings() {
                 <div className="flex flex-wrap mt-2">
                   {project.tech.map((tag, index) => (
                     <span
-                    key={index}
-                    className="inline-flex items-center bg-gray-200 text-gray-800 text-sm rounded-full px-3 py-1 mr-2 mb-2 border border-gray-300"
+                      key={index}
+                      className="inline-flex items-center bg-gray-200 text-gray-800 text-sm rounded-full px-3 py-1 mr-2 mb-2 border border-gray-300"
                     >
                       {tag}
                     </span>
@@ -100,11 +97,11 @@ export function ProjectListings() {
 }
 
 export function ProjectListing(props) {
-  const projectItem = props.projectItem;
+  const projectItem: Project = props.projectItem;
   return (
     <div className={clsx("text--center margin-bottom--xl px-4", styles.projectItem)}>
       <Link to={useBaseUrl("/projects")}>
-        <button className="border-0 rounded py-2 px-4 mb-2 bg-primary-900 hover:bg-primary-800 transition text-white text-lg cursor-pointer">
+        <button className="border-0 rounded py-2 px-4 mb-2  text-lg cursor-pointer">
           Back
         </button>
       </Link>
@@ -124,7 +121,7 @@ export function ProjectListing(props) {
             {projectItem.period}
           </li>
           <li>
-            <FontAwesomeIcon title="Code" icon={faCode} /> {projectItem.tech}
+            <FontAwesomeIcon title="Code" icon={faCode} /> {projectItem.tech.join(", ")}
           </li>
         </ul>
         <b>Description</b>
@@ -145,7 +142,7 @@ export function ProjectListing(props) {
         )}
       </div>
       <Link to={useBaseUrl("/projects")}>
-        <button className="border-0 rounded py-2 px-4 bg-primary-900 hover:bg-primary-800 transition text-white text-lg cursor-pointer">
+        <button className="border-0 rounded py-2 px-4 text-lg cursor-pointer">
           More projects
         </button>
       </Link>
@@ -155,7 +152,6 @@ export function ProjectListing(props) {
 
 export default function Projects() {
   const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
 
   const [loaded, setLoaded] = useState(false);
   const [showProjectItem, setShowProjectItem] = useState(false);
@@ -186,7 +182,7 @@ export default function Projects() {
   return (
     <Layout title="Projects" description="Software Developer, Flutter Developer">
       <header className={styles.projectPageHeader}>
-        <h2 className="border-0 border-b-4">
+        <h2 className="text-3xl border-0 border-b-4 py-8">
           Projects
         </h2>
       </header>

@@ -1,6 +1,6 @@
 ---
-slug: first-blog-post
-title: First Blog Post
+slug: hello-world
+title: Hello, World!
 authors:
     - key: justin
       title: Software Developer

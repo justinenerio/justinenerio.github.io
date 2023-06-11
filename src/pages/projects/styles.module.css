@@ -4,15 +4,15 @@
   color: black;
   display: block;
   overflow: hidden;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   position: relative;
   text-align: center;
 }
 
-.projectPageHeader h2 {
+/* .projectPageHeader h2 {
   display: inline-block;
   padding-bottom: 6px;
-}
+} */
 
 .projectItem {
   margin: 0 auto;

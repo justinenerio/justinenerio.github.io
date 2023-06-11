@@ -29,9 +29,9 @@ function Home() {
           <p>Hi, my name is</p>
           <h1 className="text-success">Justin Enerio</h1>
           <p>
-            I am a <span className="text-warning">Software Engineer</span> focused on 
-            <span className="text-danger"> Flutter Development</span>, passionate about
-            solving meaningful problems.
+            I am a <span style={{ color: 'red', fontWeight: 'bold' }}>Software Engineer</span> focused 
+            on <span style={{ color: '#0175C2', fontWeight: 'bold' }}>Flutter Development</span>, 
+            passionate about solving meaningful problems.
           </p>
           <SocialLinks />
         </div>
