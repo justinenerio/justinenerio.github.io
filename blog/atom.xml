@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://justinenerio.dev/blog</id>
     <title>Justin Enerio Blog</title>
-    <updated>2023-06-11T00:00:00.000Z</updated>
+    <updated>2023-06-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://justinenerio.dev/blog"/>
     <subtitle>Justin Enerio Blog</subtitle>
@@ -11,13 +11,13 @@
         <title type="html"><![CDATA[Hello, World!]]></title>
         <id>https://justinenerio.dev/blog/hello-world</id>
         <link href="https://justinenerio.dev/blog/hello-world"/>
-        <updated>2023-06-11T00:00:00.000Z</updated>
+        <updated>2023-06-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
         <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
         <author>
             <name>Justin Enerio</name>
             <uri>https://github.com/justinenerio</uri>
         </author>
-        <category label="hola" term="hola"/>
+        <category label="hello" term="hello"/>
     </entry>
 </feed>
