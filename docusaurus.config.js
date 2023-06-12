@@ -26,9 +26,6 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        // },
         blog: {
           showReadingTime: true,
         },
@@ -36,7 +33,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         gtag: {
-          trackingID: 'GTM-PM5CPZC',
+          trackingID: 'G-V2KC8E90V1',
           anonymizeIP: true,
         },
       }),

@@ -27,7 +27,7 @@ function Home() {
           style={{ minHeight: bannerHeight, display: isLoading ? "none" : "block" }}
         >
           <p>Hi, my name is</p>
-          <h1 className="text-success">Justin Enerio</h1>
+          <h1>Justin Enerio</h1>
           <p>
             I am a <span style={{ color: 'red', fontWeight: 'bold' }}>Software Engineer</span> focused 
             on <span style={{ color: '#0175C2', fontWeight: 'bold' }}>Flutter Development</span>, 
