@@ -12,8 +12,8 @@
         <id>https://justinenerio.dev/blog/hello-world</id>
         <link href="https://justinenerio.dev/blog/hello-world"/>
         <updated>2023-06-12T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
-        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <summary type="html"><![CDATA[Hey there! Welcome to my new blog, where I'm excited to share my ideas and experiences with all of you. I created this site to boost my online presence and have a place to write about my thoughts and adventures. Whether you stumbled upon this blog by chance or came here on purpose, I'm super glad you're here! So, let's dive in together and have some fun exploring various topics. Don't hesitate to reach out or contact me—I'd love to hear from you!]]></summary>
+        <content type="html"><![CDATA[<p>Hey there! Welcome to my new blog, where I'm excited to share my ideas and experiences with all of you. I created this site to boost my online presence and have a place to write about my thoughts and adventures. Whether you stumbled upon this blog by chance or came here on purpose, I'm super glad you're here! So, let's dive in together and have some fun exploring various topics. Don't hesitate to reach out or contact me—I'd love to hear from you!</p><p>Thanks for dropping by and joining me on this new blogging adventure. Let's make this a space where we can connect, share ideas, and have a good time. Can't wait to get started!</p>]]></content>
         <author>
             <name>Justin Enerio</name>
             <uri>https://github.com/justinenerio</uri>
