@@ -9,12 +9,12 @@ const AboutMe = () => {
   const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
 
   return (
-    <animated.div style={fade} className="flex flex-col items-center justify-center py-8 md:py-16">
+    <animated.div style={fade} className="flex flex-col items-center justify-center pb-24 py-8 md:py-16">
       <h2 className="text-3xl font-bold mb-12">About Me</h2>
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between w-full max-w-4xl px-8">
         <div className="md:w-1/2 md:pr-8 mb-4 md:mb-0" style={{ flex: 3 }}>
           <p className="mb-4">
-          Welcome! I'm Justin Enerio, a dedicated Flutter Developer specializing in frontend work. 
+          Welcome! I'm Justin Enerio, a software engineer specializing on Flutter Development. 
           With a keen eye for design and a passion for creating seamless user experiences, I bring 
           ideas to life through intuitive interfaces and clean code. I stay at the forefront of 
           emerging technologies, constantly learning and adapting to deliver innovative solutions.
