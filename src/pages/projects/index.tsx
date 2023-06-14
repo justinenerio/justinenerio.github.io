@@ -24,6 +24,7 @@ import {
   Project,
   ProjectList,
 } from '../../data/_projects';
+import Head from "@docusaurus/Head";
 
 function CategoryIcon({ category }) {
   let faIcon;
@@ -151,8 +152,6 @@ export function ProjectListing(props) {
 }
 
 export default function Projects() {
-  const context = useDocusaurusContext();
-
   const [loaded, setLoaded] = useState(false);
   const [showProjectItem, setShowProjectItem] = useState(false);
   const [projectItem, setProjectItem] = useState(ProjectList[0]);
@@ -179,8 +178,21 @@ export default function Projects() {
     handleTransition();
   });
 
+  let titles = "";
+  ProjectList.forEach((project, index) => {
+    titles += project.title;
+    if (index !== ProjectList.length - 1) {
+      titles += ", ";
+    }
+  });
+
+  console.log(titles);
+
   return (
     <Layout title="Projects" description="Software Developer, Flutter Developer">
+      <Head>
+        <meta property="keywords" content={titles} />
+      </Head>
       <header className={styles.projectPageHeader}>
         <h2 className="text-3xl border-0 border-b-4 py-8">
           Projects

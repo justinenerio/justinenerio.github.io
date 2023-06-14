@@ -4,6 +4,7 @@ title: Hello, World!
 authors:
     - key: justin
       title: Software Developer
+keywords: [hello, world, first blog, welcome]
 tags: [hello]
 ---
 

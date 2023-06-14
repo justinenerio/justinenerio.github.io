@@ -43,7 +43,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{ name: 'keywords', content: 'personal, blog, software, development, justinenerio, justin, enerio, philippines' }],
+      metadata: [{ name: 'keywords', content: 'personal, blog, software, development, justinenerio, justin, enerio, philippines, remote, developer' }],
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
