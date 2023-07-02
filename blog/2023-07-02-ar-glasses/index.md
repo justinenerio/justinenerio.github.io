@@ -1,15 +1,16 @@
 ---
 slug: ar-glasses-software-development
 title: "AR Glasses: The Future of Coding"
+description: "Discover how AR glasses are revolutionizing software development. Boost productivity, enhance mobility, and unlock new possibilities in coding with these cutting-edge wearable devices. Explore the benefits of AR glasses for developers on the go and embrace the future of software development."
 authors:
     - key: justin
       title: Software Engineer
 keywords: [ar, augmented reality, software development, coding, productivity]
 tags: [xreal, software development, productivity]
-image: ./header.jpg
+image: ./header.webp
 ---
 
-![AR glasses and laptop in an airport](./header.jpg)
+![AR glasses and laptop in an airport](./header.webp)
 
 ## AR Glasses: The Game-Changer for Software Development
 
@@ -25,7 +26,7 @@ Setting up the AR glasses is remarkably straightforward. Simply connect them to 
 
 One of the most significant advantages of these glasses is the clarity and crispness of the triple monitor setup. As a software developer involved in mobile and web app creation, having multiple monitors is highly beneficial. Picture your favorite integrated development environment (IDE) at the center, a mobile simulator or Chrome debug instance on the right, and a browser window with ChatGPT and Slack on the left. All of these applications run seamlessly on the AR glasses' silky-smooth 72 Hz display, providing an immersive and productive working environment. Additionally, XReal plans to release a firmware update in the near future, upgrading the display to an impressive 90 Hz.
 
-![Software coding inside AR glasses](./view-ar-glasses.jpg)
+![Software coding inside AR glasses](./view-ar-glasses.webp)
 
 ## Overcoming Limitations
 
