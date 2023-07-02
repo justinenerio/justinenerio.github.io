@@ -3,7 +3,7 @@ slug: hello-world
 title: Hello, World!
 authors:
     - key: justin
-      title: Software Developer
+      title: Software Engineer
 keywords: [hello, world, first blog, welcome]
 tags: [hello]
 ---
