@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[731],{6259:e=>{e.exports=JSON.parse('{"label":"xreal","permalink":"/blog/tags/xreal","allTagsPath":"/blog/tags","count":1}')}}]);
