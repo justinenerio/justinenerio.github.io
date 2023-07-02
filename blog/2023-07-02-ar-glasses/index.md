@@ -6,6 +6,7 @@ authors:
       title: Software Engineer
 keywords: [ar, augmented reality, software development, coding, productivity]
 tags: [xreal, software development, productivity]
+image: ./header.jpg
 ---
 
 ![AR glasses and laptop in an airport](./header.jpg)
